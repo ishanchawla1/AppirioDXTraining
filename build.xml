@@ -1,0 +1,27 @@
+<project name="plpcco" default="ret" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+	<!-- Retrieve an unpackaged set of metadata from your org -->
+    <!-- The file unpackaged/package.xml lists what is to be retrieved -->
+
+	<target name="retrieve">
+
+      <mkdir dir="retrievedPackage3"/>
+      <!-- Retrieve the contents into another directory -->
+      <sf:retrieve username="${sfsource.username}" password="${sfsource.password}" serverurl="${sfsource.serverurl}"
+	  retrieveTarget="retrievedPackage3" unpackaged="RM_Assignment_Package.xml"/>
+	</target>
+
+	<target name="validate">
+	  <sf:deploy username="${sftarget.username}" password="${sftarget.password}" serverurl="${sftarget.serverurl}"
+	  deployRoot="retrievedPackage3" checkOnly="true" runAllTests="false" maxPoll="2400" />
+	</target>
+<!--
+	 <target name="deploy">
+	  <sf:deploy username="${sftarget.username}" password="${sftarget.password}" serverurl="${sftarget.serverurl}"
+	  deployRoot="retrievedPackage" maxPoll="140" rollbackOnError="true" />
+	</target>-->
+
+</project>
