@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Apex__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Apex</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>C#</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <description>Position will be closed at this date</description>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Educational_Requirements__c</fullName>
+        <description>Minimum educational requirements</description>
+        <externalId>false</externalId>
+        <label>Educational Requirements</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Functional_area__c</fullName>
+        <description>Department of the position</description>
+        <externalId>false</externalId>
+        <label>Functional area</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                    <label>Finance</label>
+                </value>
+                <value>
+                    <fullName>Human Resources</fullName>
+                    <default>false</default>
+                    <label>Human Resources</label>
+                </value>
+                <value>
+                    <fullName>Information Technology</fullName>
+                    <default>false</default>
+                    <label>Information Technology</label>
+                </value>
+                <value>
+                    <fullName>Retail Operations</fullName>
+                    <default>false</default>
+                    <label>Retail Operations</label>
+                </value>
+                <value>
+                    <fullName>Warehousing</fullName>
+                    <default>false</default>
+                    <label>Warehousing</label>
+                </value>
+                <value>
+                    <fullName>Miscellaneous</fullName>
+                    <default>false</default>
+                    <label>Miscellaneous</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Hire_By__c</fullName>
+        <description>Candidates hired should be acknowledged before this date</description>
+        <externalId>false</externalId>
+        <label>Hire By</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Hiring_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Hiring Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Positions</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoice__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Invoice</label>
+        <referenceTo>Invoice__c</referenceTo>
+        <relationshipLabel>Positions</relationshipLabel>
+        <relationshipName>Line_items</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Java__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Java</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Javascript__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Javascript</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Job_Level__c</fullName>
+        <description>Job position hierarchy</description>
+        <externalId>false</externalId>
+        <label>Job Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Functional_area__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FN-300</fullName>
+                    <default>false</default>
+                    <label>FN-300</label>
+                </value>
+                <value>
+                    <fullName>FN-400</fullName>
+                    <default>false</default>
+                    <label>FN-400</label>
+                </value>
+                <value>
+                    <fullName>HR-100</fullName>
+                    <default>false</default>
+                    <label>HR-100</label>
+                </value>
+                <value>
+                    <fullName>HR-200</fullName>
+                    <default>false</default>
+                    <label>HR-200</label>
+                </value>
+                <value>
+                    <fullName>HR-300</fullName>
+                    <default>false</default>
+                    <label>HR-300</label>
+                </value>
+                <value>
+                    <fullName>HR-400</fullName>
+                    <default>false</default>
+                    <label>HR-400</label>
+                </value>
+                <value>
+                    <fullName>IT-100</fullName>
+                    <default>false</default>
+                    <label>IT-100</label>
+                </value>
+                <value>
+                    <fullName>IT-200</fullName>
+                    <default>false</default>
+                    <label>IT-200</label>
+                </value>
+                <value>
+                    <fullName>IT-300</fullName>
+                    <default>false</default>
+                    <label>IT-300</label>
+                </value>
+                <value>
+                    <fullName>IT-400</fullName>
+                    <default>false</default>
+                    <label>IT-400</label>
+                </value>
+                <value>
+                    <fullName>RO-100</fullName>
+                    <default>false</default>
+                    <label>RO-100</label>
+                </value>
+                <value>
+                    <fullName>RO-200</fullName>
+                    <default>false</default>
+                    <label>RO-200</label>
+                </value>
+                <value>
+                    <fullName>RO-300</fullName>
+                    <default>false</default>
+                    <label>RO-300</label>
+                </value>
+                <value>
+                    <fullName>RO-400</fullName>
+                    <default>false</default>
+                    <label>RO-400</label>
+                </value>
+                <value>
+                    <fullName>WH-100</fullName>
+                    <default>false</default>
+                    <label>WH-100</label>
+                </value>
+                <value>
+                    <fullName>WH-200</fullName>
+                    <default>false</default>
+                    <label>WH-200</label>
+                </value>
+                <value>
+                    <fullName>WH-300</fullName>
+                    <default>false</default>
+                    <label>WH-300</label>
+                </value>
+                <value>
+                    <fullName>WH-400</fullName>
+                    <default>false</default>
+                    <label>WH-400</label>
+                </value>
+                <value>
+                    <fullName>MC-100</fullName>
+                    <default>false</default>
+                    <label>MC-100</label>
+                </value>
+                <value>
+                    <fullName>MC-200</fullName>
+                    <default>false</default>
+                    <label>MC-200</label>
+                </value>
+                <value>
+                    <fullName>MC-300</fullName>
+                    <default>false</default>
+                    <label>MC-300</label>
+                </value>
+                <value>
+                    <fullName>MC-400</fullName>
+                    <default>false</default>
+                    <label>MC-400</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Finance</controllingFieldValue>
+                <valueName>FN-300</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Finance</controllingFieldValue>
+                <valueName>FN-400</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Human Resources</controllingFieldValue>
+                <valueName>HR-100</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Human Resources</controllingFieldValue>
+                <valueName>HR-200</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Human Resources</controllingFieldValue>
+                <valueName>HR-300</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Human Resources</controllingFieldValue>
+                <valueName>HR-400</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Information Technology</controllingFieldValue>
+                <valueName>IT-100</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Information Technology</controllingFieldValue>
+                <valueName>IT-200</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Information Technology</controllingFieldValue>
+                <valueName>IT-300</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Information Technology</controllingFieldValue>
+                <valueName>IT-400</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail Operations</controllingFieldValue>
+                <valueName>RO-100</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail Operations</controllingFieldValue>
+                <valueName>RO-200</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail Operations</controllingFieldValue>
+                <valueName>RO-300</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail Operations</controllingFieldValue>
+                <valueName>RO-400</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Warehousing</controllingFieldValue>
+                <valueName>WH-100</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Warehousing</controllingFieldValue>
+                <valueName>WH-200</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Warehousing</controllingFieldValue>
+                <valueName>WH-300</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Warehousing</controllingFieldValue>
+                <valueName>WH-400</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>MC-100</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>MC-200</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>MC-300</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miscellaneous</controllingFieldValue>
+                <valueName>MC-400</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Job_description__c</fullName>
+        <description>Details about the job position</description>
+        <externalId>false</externalId>
+        <label>Job description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <description>Cities where this job position is open</description>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>San Francisco, CA</fullName>
+                    <default>false</default>
+                    <label>San Francisco, CA</label>
+                </value>
+                <value>
+                    <fullName>Austin, TX</fullName>
+                    <default>false</default>
+                    <label>Austin, TX</label>
+                </value>
+                <value>
+                    <fullName>Boulder, CO</fullName>
+                    <default>false</default>
+                    <label>Boulder, CO</label>
+                </value>
+                <value>
+                    <fullName>London, England</fullName>
+                    <default>false</default>
+                    <label>London, England</label>
+                </value>
+                <value>
+                    <fullName>New York, NY</fullName>
+                    <default>false</default>
+                    <label>New York, NY</label>
+                </value>
+                <value>
+                    <fullName>Mumbai, India</fullName>
+                    <default>false</default>
+                    <label>Mumbai, India</label>
+                </value>
+                <value>
+                    <fullName>Sydney, Australia</fullName>
+                    <default>false</default>
+                    <label>Sydney, Australia</label>
+                </value>
+                <value>
+                    <fullName>Tokyo, Japan</fullName>
+                    <default>false</default>
+                    <label>Tokyo, Japan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_on_map__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Location on map</label>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Max_Pay__c</fullName>
+        <description>Maximum salary to be given at this posit</description>
+        <externalId>false</externalId>
+        <label>Max Pay</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Min_Pay__c</fullName>
+        <description>Minimum salary to be given at this position</description>
+        <externalId>false</externalId>
+        <label>Min Pay</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>No_of_days_open__c</fullName>
+        <description>The number of days a position has been (or was) open.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Close_Date__c ),  TODAY() - Open_date__c , Close_Date__c - Open_date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>No of days open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Open date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Positions</relationshipLabel>
+        <relationshipName>Positions</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Responsibilities__c</fullName>
+        <description>Responsibilities of the job</description>
+        <externalId>false</externalId>
+        <label>Responsibilities</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Skills_Required__c</fullName>
+        <description>mandatory skills for the job</description>
+        <externalId>false</externalId>
+        <label>Skills Required</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Current status of this position</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Position</fullName>
+                    <default>false</default>
+                    <label>New Position</label>
+                </value>
+                <value>
+                    <fullName>Pending Approval</fullName>
+                    <default>false</default>
+                    <label>Pending Approval</label>
+                </value>
+                <value>
+                    <fullName>Open - Approved</fullName>
+                    <default>false</default>
+                    <label>Open - Approved</label>
+                </value>
+                <value>
+                    <fullName>Closed - Filled</fullName>
+                    <default>false</default>
+                    <label>Closed - Filled</label>
+                </value>
+                <value>
+                    <fullName>Closed - Not Approved</fullName>
+                    <default>false</default>
+                    <label>Closed - Not Approved</label>
+                </value>
+                <value>
+                    <fullName>Closed - Canceled</fullName>
+                    <default>false</default>
+                    <label>Closed - Canceled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Travel_required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Travel required</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Type of job</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full Time</fullName>
+                    <default>false</default>
+                    <label>Full Time</label>
+                </value>
+                <value>
+                    <fullName>Part Time</fullName>
+                    <default>false</default>
+                    <label>Part Time</label>
+                </value>
+                <value>
+                    <fullName>Internship</fullName>
+                    <default>false</default>
+                    <label>Internship</label>
+                </value>
+                <value>
+                    <fullName>Contractor</fullName>
+                    <default>false</default>
+                    <label>Contractor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Positions</relationshipLabel>
+        <relationshipName>Positions</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Position</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>Educational_Requirements__c</columns>
+        <columns>Job_description__c</columns>
+        <columns>Max_Pay__c</columns>
+        <columns>Min_Pay__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Position Title</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Positions</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>IT_Position</fullName>
+        <active>true</active>
+        <description>Record type for all IT positions.</description>
+        <label>IT Position</label>
+        <picklistValues>
+            <picklist>Functional_area__c</picklist>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Job_Level__c</picklist>
+            <values>
+                <fullName>FN-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FN-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-400</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Location__c</picklist>
+            <values>
+                <fullName>Austin%2C TX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boulder%2C CO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>London%2C England</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mumbai%2C India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New York%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Francisco%2C CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sydney%2C Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tokyo%2C Japan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Filled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Position</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open - Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Part Time</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_Position</fullName>
+        <active>true</active>
+        <description>Record type for all non-IT positions</description>
+        <label>Standard Position</label>
+        <picklistValues>
+            <picklist>Functional_area__c</picklist>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Operations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warehousing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Job_Level__c</picklist>
+            <values>
+                <fullName>FN-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FN-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HR-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO-400</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WH-400</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Location__c</picklist>
+            <values>
+                <fullName>Austin%2C TX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Boulder%2C CO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>London%2C England</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mumbai%2C India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New York%2C NY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Francisco%2C CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sydney%2C Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tokyo%2C Japan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Filled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Position</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open - Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full Time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Part Time</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>Close_Date_Rule</fullName>
+        <active>true</active>
+        <description>Closed date cannot remain empty if the status is &quot;Closed-Filled&quot; or &quot;Closed-Not Approved&quot;</description>
+        <errorConditionFormula>IF(
+
+AND( ISBLANK( Close_Date__c ), OR( ISPICKVAL( Status__c , &quot;Closed - Filled&quot;),ISPICKVAL( Status__c , &quot;Closed - Not Approved&quot;)) )
+
+
+,true, false)</errorConditionFormula>
+        <errorMessage>Close Date must be specified when Status is set to &apos;Closed.&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Min_Pay_Rule</fullName>
+        <active>true</active>
+        <description>Minimum pay should never exceed max pay</description>
+        <errorConditionFormula>IF( Min_Pay__c &gt;  Max_Pay__c , true, false)</errorConditionFormula>
+        <errorMessage>Minimum pay cannot exceed the maximum pay</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>
