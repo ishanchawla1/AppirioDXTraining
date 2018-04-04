@@ -1,0 +1,42 @@
+
+for (lmscons__Transcript__c t1: trans){
+List < lmscons__Transcript_Line__c > tl1 = mapp.get(t1.Id);
+if(tl1.size()==0 && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()==Null)
+{ //No assignments in transcript and have no CFS Activation date
+usersToDeactivate.add(userIdUserMap.get(transcriptUserMap.get(t1.Id)));
+}
+else if(tl1.size()==0 && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()!=Null && ((userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()).daysBetween(System.Today())>cutoffdate))
+{ //No assignments in transcript but have CFS Activation date and days between CFS Activation date and today > cutoff days
+usersToDeactivate.add(userIdUserMap.get(transcriptUserMap.get(t1.Id)));
+}
+else
+{ //Assignments in transcript
+Date max;
+for (integer i = 0; i < size; ++i) {
+if (max < tl1[i].lmscons__Last_Launched_Date__c||(max==null && tl1[i].lmscons__Last_Launched_Date__c.date()!=null)){ 
+max = tl1[i].lmscons__Last_Launched_Date__c.date();}
+}
+// Comparing last login and Activation date with cutoffdate
+if(max==null && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()==null)
+{ // if both max of last login date and CFS Activation date is null
+usersToDeactivate.add(userIdUserMap.get(transcriptUserMap.get(t1.Id)));
+}
+else if(max==null && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()!=Null && ((userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()).daysBetween(System.Today())>cutoffdate))
+{ // if max of last login date is null but CFS activation date is not null and difference between today and activation date is > cutoff date
+usersToDeactivate.add(userIdUserMap.get(transcriptUserMap.get(t1.Id)));
+}
+else if(max!=null && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()!=Null && max>userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date() && (max.daysBetween(System.Today())>cutoffdate))
+{ // if both max of last login date and CFS Activation date are not null and max of last login date is > CFS activation date and cutoff date
+usersToDeactivate.add(userIdUserMap.get(transcriptUserMap.get(t1.Id)));
+}
+else if(max!=null && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()!=Null && max<userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date() && ((userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()).daysBetween(System.Today())>cutoffdate))
+{ // if both max of last login date and CFS Activation date are not null and max of last login date is < CFS activation date > cutoff date
+usersToDeactivate.add(userIdUserMap.get(transcriptUserMap.get(t1.Id)));
+}
+else if( max!=null && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()==Null && (max.daysBetween(System.Today())>cutoffdate))
+{ // if CFS Activation Date is null and max of last launched date is not null and it is greater then cutoff date
+usersToDeactivate.add(userIdUserMap.get(transcriptUserMap.get(t1.Id)));
+}
+}
+}
+
