@@ -1,4 +1,4 @@
-
+//NOT JSON
 for (lmscons__Transcript__c t1: trans){
 List < lmscons__Transcript_Line__c > tl1 = mapp.get(t1.Id);
 if(tl1.size()==0 && userIdUserMap.get(transcriptUserMap.get(t1.Id)).CFS_Activation_Date__c.date()==Null)
